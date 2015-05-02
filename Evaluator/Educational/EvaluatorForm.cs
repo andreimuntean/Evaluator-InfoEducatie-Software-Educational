@@ -34,8 +34,9 @@ namespace InfoEducatie.Educational.Evaluator
             proiect.distribuireNeechilibrata = slider210.Value;
 
             // Interfata.
-            proiect.impresieInterfata = slider31.Value;
-            proiect.usurintaInFolosire = slider32.Value;
+            proiect.aspectPlacut = slider31.Value;
+            proiect.responsive = slider32.Value;
+            proiect.usurintaInFolosire = slider33.Value;
 
             // Continut.
             proiect.multipleFunctionalitati = slider41.Value;
@@ -119,6 +120,7 @@ namespace InfoEducatie.Educational.Evaluator
             rezultat210.Text = string.Format("{0}%", slider210.Value);
             rezultat31.Text = string.Format("+{0}p", slider31.Value);
             rezultat32.Text = string.Format("+{0}p", slider32.Value);
+            rezultat33.Text = string.Format("+{0}p", slider33.Value);
             rezultat41.Text = string.Format("+{0}p", slider41.Value);
             rezultat42.Text = string.Format("{0}%", slider42.Value);
             rezultat43.Text = string.Format("+{0}p", slider43.Value);

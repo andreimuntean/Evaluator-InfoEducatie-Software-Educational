@@ -91,7 +91,8 @@
         {
             double rezultat = 0;
 
-            rezultat += proiect.impresieInterfata;
+            rezultat += proiect.aspectPlacut;
+            rezultat += proiect.responsive;
             rezultat += proiect.usurintaInFolosire;
 
             return rezultat;

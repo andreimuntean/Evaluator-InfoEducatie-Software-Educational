@@ -58,7 +58,8 @@
         /* Interfata (20p). */
 
         // Impresia generala (10p).
-        public int impresieInterfata; // +10p.
+        public int aspectPlacut; // +6p.
+        public int responsive; // +4p.
 
         // Usurinta in folosire (10p).
         public int usurintaInFolosire; // +10p.

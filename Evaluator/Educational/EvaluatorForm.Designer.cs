@@ -166,6 +166,10 @@
             this.rezultatPrezentare = new System.Windows.Forms.TextBox();
             this.criteriuTotal = new System.Windows.Forms.TextBox();
             this.rezultatTotal = new System.Windows.Forms.TextBox();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.rezultat33 = new System.Windows.Forms.TextBox();
+            this.slider33 = new System.Windows.Forms.TrackBar();
+            this.criteriu33 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slider15)).BeginInit();
@@ -232,6 +236,8 @@
             this.panel31.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slider51)).BeginInit();
             this.panel11.SuspendLayout();
+            this.panel32.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.slider33)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -953,11 +959,12 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.panel32);
             this.groupBox3.Controls.Add(this.panel20);
             this.groupBox3.Controls.Add(this.panel21);
             this.groupBox3.Location = new System.Drawing.Point(0, 880);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(535, 125);
+            this.groupBox3.Size = new System.Drawing.Size(535, 175);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Interfață (20p)";
@@ -988,6 +995,7 @@
             // 
             this.slider32.LargeChange = 1;
             this.slider32.Location = new System.Drawing.Point(177, 3);
+            this.slider32.Maximum = 4;
             this.slider32.Name = "slider32";
             this.slider32.Size = new System.Drawing.Size(170, 45);
             this.slider32.TabIndex = 6;
@@ -1004,7 +1012,7 @@
             this.criteriu32.ReadOnly = true;
             this.criteriu32.Size = new System.Drawing.Size(175, 50);
             this.criteriu32.TabIndex = 0;
-            this.criteriu32.Text = "Ușurința în folosire";
+            this.criteriu32.Text = "Se poate adapta la diferite rezoluții";
             // 
             // panel21
             // 
@@ -1021,6 +1029,7 @@
             // 
             this.slider31.LargeChange = 1;
             this.slider31.Location = new System.Drawing.Point(177, 3);
+            this.slider31.Maximum = 6;
             this.slider31.Name = "slider31";
             this.slider31.Size = new System.Drawing.Size(170, 45);
             this.slider31.TabIndex = 6;
@@ -1048,7 +1057,7 @@
             this.criteriu31.ReadOnly = true;
             this.criteriu31.Size = new System.Drawing.Size(175, 50);
             this.criteriu31.TabIndex = 0;
-            this.criteriu31.Text = "Impresia generală";
+            this.criteriu31.Text = "Aspect plăcut";
             // 
             // groupBox4
             // 
@@ -1060,7 +1069,7 @@
             this.groupBox4.Controls.Add(this.panel26);
             this.groupBox4.Controls.Add(this.panel27);
             this.groupBox4.Controls.Add(this.panel28);
-            this.groupBox4.Location = new System.Drawing.Point(0, 1045);
+            this.groupBox4.Location = new System.Drawing.Point(0, 1095);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(535, 425);
             this.groupBox4.TabIndex = 7;
@@ -1792,6 +1801,50 @@
             this.rezultatTotal.Size = new System.Drawing.Size(50, 20);
             this.rezultatTotal.TabIndex = 24;
             // 
+            // panel32
+            // 
+            this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel32.Controls.Add(this.rezultat33);
+            this.panel32.Controls.Add(this.slider33);
+            this.panel32.Controls.Add(this.criteriu33);
+            this.panel32.Location = new System.Drawing.Point(5, 120);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(525, 50);
+            this.panel32.TabIndex = 11;
+            // 
+            // rezultat33
+            // 
+            this.rezultat33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.rezultat33.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rezultat33.Location = new System.Drawing.Point(350, 0);
+            this.rezultat33.Multiline = true;
+            this.rezultat33.Name = "rezultat33";
+            this.rezultat33.ReadOnly = true;
+            this.rezultat33.Size = new System.Drawing.Size(175, 50);
+            this.rezultat33.TabIndex = 7;
+            // 
+            // slider33
+            // 
+            this.slider33.LargeChange = 1;
+            this.slider33.Location = new System.Drawing.Point(177, 3);
+            this.slider33.Name = "slider33";
+            this.slider33.Size = new System.Drawing.Size(170, 45);
+            this.slider33.TabIndex = 6;
+            this.slider33.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.slider33.Scroll += new System.EventHandler(this.slider_Scroll);
+            // 
+            // criteriu33
+            // 
+            this.criteriu33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.criteriu33.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.criteriu33.Location = new System.Drawing.Point(0, 0);
+            this.criteriu33.Multiline = true;
+            this.criteriu33.Name = "criteriu33";
+            this.criteriu33.ReadOnly = true;
+            this.criteriu33.Size = new System.Drawing.Size(175, 50);
+            this.criteriu33.TabIndex = 0;
+            this.criteriu33.Text = "Interfață intuitivă, ușor de parcurs";
+            // 
             // EvaluatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1910,6 +1963,9 @@
             this.panel31.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slider51)).EndInit();
             this.panel11.ResumeLayout(false);
+            this.panel32.ResumeLayout(false);
+            this.panel32.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.slider33)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2055,6 +2111,10 @@
         private System.Windows.Forms.TextBox rezultatPrezentare;
         private System.Windows.Forms.TextBox criteriuTotal;
         private System.Windows.Forms.TextBox rezultatTotal;
+        private System.Windows.Forms.Panel panel32;
+        private System.Windows.Forms.TextBox rezultat33;
+        private System.Windows.Forms.TrackBar slider33;
+        private System.Windows.Forms.TextBox criteriu33;
     }
 }
 
