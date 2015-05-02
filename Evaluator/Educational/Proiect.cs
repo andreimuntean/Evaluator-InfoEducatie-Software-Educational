@@ -12,8 +12,8 @@
 
     public class Proiect    
     {
-        // +x = Adauga x puncte sectiunii respective.
-        // -x% = Scade x% din punctajul sectiunii respective.
+        // +x = Adauga pana in x puncte sectiunii respective.
+        // -x% = Scade pana in x% din punctajul sectiunii respective.
 
 
         /* Arhitectura aplicatiei (20p). */
@@ -46,7 +46,7 @@
         public int testataRiguros; // +2p.
 
         // Securitatea aplicatiei.
-        public Securitate securitate; // -40% / -20% / Okay.
+        public Securitate securitate; // -30% / -15% / Okay.
 
         // Folosirea unui sistem de versionare.
         public int sistemDeVersionareNeutilizat; // -10%.
@@ -82,7 +82,7 @@
         public Originalitate originalitate; // -30% / -10% / Okay.
 
         // Corectitudinea informatiilor din punct de vedere stiintific.
-        public Corectitudine corectitudine; // -40% / -20% / -10% / Okay.
+        public Corectitudine corectitudine; // -30% / -20% / -10% / Okay.
 
 
         /* Prezentarea proiectului (10p). */
