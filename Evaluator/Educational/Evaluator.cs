@@ -28,7 +28,7 @@
             rezultat += proiect.librariiOpenSource;
             scalingFactor += toPercentage(proiect.tehnologiiModerne);
             rezultat += proiect.folosireaParadigmelor;
-            rezultat += proiect.creareUnorNoiServicii;
+            rezultat += proiect.complexitateaTehnica;
             
             switch (proiect.portabilitate)
             {

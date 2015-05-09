@@ -22,7 +22,7 @@
         
         // Proiectarea arhitecturala (10p).
         public int folosireaParadigmelor; // +5p.
-        public int creareUnorNoiServicii; // +5p.
+        public int complexitateaTehnica; // +5p.
         
         // Portabilitate.
         public Portabilitate portabilitate; // -30% / -20% / -10% / Okay.

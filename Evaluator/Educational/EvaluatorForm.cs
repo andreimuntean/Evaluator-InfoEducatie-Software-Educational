@@ -20,7 +20,7 @@ namespace InfoEducatie.Educational.Evaluator
             proiect.librariiOpenSource = slider13.Value;
             proiect.tehnologiiModerne = slider14.Value;
             proiect.folosireaParadigmelor = slider15.Value;
-            proiect.creareUnorNoiServicii = slider16.Value;
+            proiect.complexitateaTehnica = slider16.Value;
             proiect.portabilitate = (Portabilitate)slider17.Value;
 
             // Implementarea aplicatiei.
