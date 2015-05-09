@@ -1,8 +1,6 @@
 ﻿namespace InfoEducatie.Educational.Evaluator
 {
-    public enum Portabilitate { Zero, Unu, Trei, Cinci }
-
-    public enum Maturitate { Zero, Patru, Sapte, Zece }
+    public enum Portabilitate { Minus30, Minus20, Minus10, Okay }
 
     public enum Securitate { Minus30, Minus15, Okay }
 
@@ -15,61 +13,61 @@
         // +x = Adauga pana in x puncte sectiunii respective.
         // -x% = Scade pana in x% din punctajul sectiunii respective.
 
-
-        /* Arhitectura aplicatiei (20p). */
-
+        #region Arhitectura aplicatiei (20p)
         // Tehnologii folosite (10p).
-        public int tehnologiiOptime; // +10p.
-        public int faraTehnologiiModerne; // -30%.
+        public int tehnologiiPotrivite; // +4p.
+        public int formatOptimDeStocareADatelor; // +3p.
+        public int librariiOpenSource; // +3p.
+        public int tehnologiiModerne; // -30%.
         
-        // Proiectarea arhitecturala (5p).
-        public int folosireaParadigmelor; // +4p.
-        public int tehnologiiOpenSource; // +1p.
+        // Proiectarea arhitecturala (10p).
+        public int folosireaParadigmelor; // +5p.
+        public int creareUnorNoiServicii; // +5p.
         
-        // Portabilitate (5p).
-        public Portabilitate portabilitate; // 5p / 3p / 1p / 0p.
+        // Portabilitate.
+        public Portabilitate portabilitate; // -30% / -20% / -10% / Okay.
 
+        #endregion
 
-        /* Implementarea aplicatiei (30p). */
-
-        // Eleganta implementarii (18p).
-        public int poateFiExtinsUsor; // +6p.
-        public int codEficient; // +3p.
+        #region Implementarea aplicatiei (30p).
+        // Eleganta implementarii (20p).
+        public int usorDeExtins; // +5p.
+        public int algoritmiiUtilizati; // +3p.
         public int variabileCuNumeSemnificative; // +3p.
         public int codConsecvent; // +3p.
         public int codDocumentat; // +3p.
+        public int codEficient; // +3p.
 
-        // Maturitatea aplicatiei (10p).
-        public Maturitate maturitateaProiectului; // 10p / 7p / 4p / 0p.
+        // Testarea aplicatiei (6p).
+        public int automatizareaTestarii; // +6p.
+        public int absentaErorilorBanale; // -10%.
 
-        // Testarea aplicatiei (2p).
-        public int testataRiguros; // +2p.
+        // Folosirea unui sistem de versionare (4p).
+        public int folosireaUnuiSistemDeVersionare; // +4p.
+
+        // Maturitatea aplicatiei.
+        public int maturitate; // -30%.
 
         // Securitatea aplicatiei.
         public Securitate securitate; // -30% / -15% / Okay.
 
-        // Folosirea unui sistem de versionare.
-        public int sistemDeVersionareNeutilizat; // -10%.
-
         // Distribuirea echilibrata a rolurilor in echipa.
-        public int distribuireNeechilibrata; // -20%.
+        public int distribuireEchilibrata; // -20%.
+        #endregion
 
-
-        /* Interfata (20p). */
-
+        #region Interfata (20p).
         // Impresia generala (10p).
         public int aspectPlacut; // +6p.
         public int responsive; // +4p.
 
         // Usurinta in folosire (10p).
         public int usurintaInFolosire; // +10p.
+        #endregion
 
-
-        /* Continut (20p). */
-        
+        #region Continut (20p).
         // Functionalitate si utilitate (5p).
         public int multipleFunctionalitati; // +5p.
-        public int functionalitatiInutile; // -20%.
+        public int utilitateaFunctionalitatilor; // -20%.
 
         // Evaluare si feedback (10p).
         public int evaluare; // +5p.
@@ -84,17 +82,17 @@
 
         // Corectitudinea informatiilor din punct de vedere stiintific.
         public Corectitudine corectitudine; // -30% / -20% / -10% / Okay.
-
-
-        /* Prezentarea proiectului (10p). */
+        #endregion
         
+        #region Prezentarea proiectului (10p).
         // Impresia generala.
         public int impresieGenerala; // +10p.
         
         // Documentatia proiectului.
-        public int faraInformatiiGenerice; // -10%;
-        public int faraTutoriale; // -20%;
-        public int faraDescriereaArhitecturii; // -20%;
-        public int faraJustificareaTehnologiilor; // -20%;
+        public int oferaInformatiiGenerice; // -10%;
+        public int prezintaTutoriale; // -20%;
+        public int descrieArhitectura; // -20%;
+        public int justificaTehnologiile; // -20%;
+        #endregion
     }
 }

@@ -15,23 +15,27 @@ namespace InfoEducatie.Educational.Evaluator
         public void ActualizeazaPunctajele()
         {
             // Arhitectura aplicatiei.
-            proiect.tehnologiiOptime = slider11.Value;
-            proiect.faraTehnologiiModerne = slider12.Value;
-            proiect.folosireaParadigmelor = slider13.Value;
-            proiect.tehnologiiOpenSource = slider14.Value;
-            proiect.portabilitate = (Portabilitate)slider15.Value;
+            proiect.tehnologiiPotrivite = slider11.Value;
+            proiect.formatOptimDeStocareADatelor = slider12.Value;
+            proiect.librariiOpenSource = slider13.Value;
+            proiect.tehnologiiModerne = slider14.Value;
+            proiect.folosireaParadigmelor = slider15.Value;
+            proiect.creareUnorNoiServicii = slider16.Value;
+            proiect.portabilitate = (Portabilitate)slider17.Value;
 
             // Implementarea aplicatiei.
-            proiect.poateFiExtinsUsor = slider21.Value;
-            proiect.codEficient = slider22.Value;
+            proiect.usorDeExtins = slider21.Value;
+            proiect.algoritmiiUtilizati = slider22.Value;
             proiect.variabileCuNumeSemnificative = slider23.Value;
             proiect.codConsecvent = slider24.Value;
             proiect.codDocumentat = slider25.Value;
-            proiect.maturitateaProiectului = (Maturitate)slider26.Value;
-            proiect.testataRiguros = slider27.Value;
-            proiect.securitate = (Securitate)slider28.Value;
-            proiect.sistemDeVersionareNeutilizat = slider29.Value;
-            proiect.distribuireNeechilibrata = slider210.Value;
+            proiect.codEficient = slider26.Value;
+            proiect.automatizareaTestarii = slider27.Value;
+            proiect.absentaErorilorBanale = slider28.Value;
+            proiect.folosireaUnuiSistemDeVersionare = slider29.Value;
+            proiect.maturitate = slider210.Value;
+            proiect.securitate = (Securitate)slider211.Value;
+            proiect.distribuireEchilibrata = slider212.Value;
 
             // Interfata.
             proiect.aspectPlacut = slider31.Value;
@@ -40,7 +44,7 @@ namespace InfoEducatie.Educational.Evaluator
 
             // Continut.
             proiect.multipleFunctionalitati = slider41.Value;
-            proiect.functionalitatiInutile = slider42.Value;
+            proiect.utilitateaFunctionalitatilor = slider42.Value;
             proiect.evaluare = slider43.Value;
             proiect.feedback = slider44.Value;
             proiect.continutActualizabil = slider45.Value;
@@ -50,32 +54,34 @@ namespace InfoEducatie.Educational.Evaluator
 
             // Prezentarea proiectului.
             proiect.impresieGenerala = slider51.Value;
-            proiect.faraInformatiiGenerice = slider52.Value;
-            proiect.faraTutoriale = slider53.Value;
-            proiect.faraDescriereaArhitecturii = slider54.Value;
-            proiect.faraJustificareaTehnologiilor = slider55.Value;
+            proiect.oferaInformatiiGenerice = slider52.Value;
+            proiect.prezintaTutoriale = slider53.Value;
+            proiect.descrieArhitectura = slider54.Value;
+            proiect.justificaTehnologiile = slider55.Value;
         }
         
         public void ActualizeazaFormularul()
         {
             rezultat11.Text = string.Format("+{0}p", slider11.Value);
-            rezultat12.Text = string.Format("{0}%", slider12.Value);
+            rezultat12.Text = string.Format("+{0}p", slider12.Value);
             rezultat13.Text = string.Format("+{0}p", slider13.Value);
-            rezultat14.Text = string.Format("+{0}p", slider14.Value);
+            rezultat14.Text = string.Format("{0}%", slider14.Value);
+            rezultat15.Text = string.Format("+{0}p", slider15.Value);
+            rezultat16.Text = string.Format("+{0}p", slider16.Value);
 
-            switch (slider15.Value)
+            switch (slider17.Value)
             {
                 case 0:
-                    rezultat15.Text = "0p. Rulează pe sub 50% din dispozitivele target audience-ului.";
+                    rezultat17.Text = "-30%. Rulează pe sub 50% din dispozitivele target audience-ului.";
                     break;
                 case 1:
-                    rezultat15.Text = "+1p. Rulează pe cel puțin 50% din dispozitivele target audience-ului.";
+                    rezultat17.Text = "-20%. Rulează pe cel puțin 50% din dispozitivele target audience-ului.";
                     break;
                 case 2:
-                    rezultat15.Text = "+3p. Rulează pe cel puțin 75% din dispozitivele target audience-ului.";
+                    rezultat17.Text = "-10%. Rulează pe cel puțin 75% din dispozitivele target audience-ului.";
                     break;
                 case 3:
-                    rezultat15.Text = "+5p. Rulează pe aproape toate dispozitivele target audience-ului.";
+                    rezultat17.Text = "Rulează pe aproape toate dispozitivele target audience-ului.";
                     break;
             }
 
@@ -84,40 +90,26 @@ namespace InfoEducatie.Educational.Evaluator
             rezultat23.Text = string.Format("+{0}p", slider23.Value);
             rezultat24.Text = string.Format("+{0}p", slider24.Value);
             rezultat25.Text = string.Format("+{0}p", slider25.Value);
-
-            switch (slider26.Value)
-            {
-                case 0:
-                    rezultat26.Text = "0p. Proiectului îi lipsesc mai multe componente majore.";
-                    break;
-                case 1:
-                    rezultat26.Text = "+4p. Proiectului îi lipsește o componentă majoră.";
-                    break;
-                case 2:
-                    rezultat26.Text = "+7p. Proiectului îi lipsesc unele componente minore.";
-                    break;
-                case 3:
-                    rezultat26.Text = "+10p. Proiectul este într-un stadiu în care poate fi publicat.";
-                    break;
-            }
-
+            rezultat26.Text = string.Format("+{0}p", slider26.Value);
             rezultat27.Text = string.Format("+{0}p", slider27.Value);
+            rezultat28.Text = string.Format("{0}%", slider28.Value);
+            rezultat29.Text = string.Format("+{0}p", slider29.Value);
+            rezultat210.Text = string.Format("{0}%", slider210.Value);
 
-            switch (slider28.Value)
+            switch (slider211.Value)
             {
                 case 0:
-                    rezultat28.Text = "-30%. Aplicația este expusă la vulnerabilități banale.";
+                    rezultat211.Text = "-30%. Aplicația este expusă la vulnerabilități banale.";
                     break;
                 case 1:
-                    rezultat28.Text = "-15%. Aplicația este expusă la unele vulnerabilități mai puțin banale.";
+                    rezultat211.Text = "-15%. Aplicația este expusă la unele vulnerabilități mai puțin banale.";
                     break;
                 case 2:
-                    rezultat28.Text = "Securitatea aplicației este rezonabilă.";
+                    rezultat211.Text = "Securitatea aplicației este rezonabilă.";
                     break;
             }
 
-            rezultat29.Text = string.Format("{0}%", slider29.Value);
-            rezultat210.Text = string.Format("{0}%", slider210.Value);
+            rezultat212.Text = string.Format("{0}%", slider212.Value);
             rezultat31.Text = string.Format("+{0}p", slider31.Value);
             rezultat32.Text = string.Format("+{0}p", slider32.Value);
             rezultat33.Text = string.Format("+{0}p", slider33.Value);
@@ -164,12 +156,12 @@ namespace InfoEducatie.Educational.Evaluator
             rezultat55.Text = string.Format("{0}%", slider55.Value);
 
             // Rezultatele finale.
-            rezultatArhitectura.Text = Evaluator.evalueazaArhitectura(proiect).ToString();
-            rezultatImplementare.Text = Evaluator.evalueazaImplementarea(proiect).ToString();
-            rezultatInterfata.Text = Evaluator.evalueazaInterfata(proiect).ToString();
-            rezultatContinut.Text = Evaluator.evalueazaContinutul(proiect).ToString();
-            rezultatPrezentare.Text = Evaluator.evalueazaPrezentarea(proiect).ToString();
-            rezultatTotal.Text = Evaluator.evalueaza(proiect).ToString();
+            rezultatArhitectura.Text = Evaluator.evalueazaArhitectura(proiect).ToString("0.00");
+            rezultatImplementare.Text = Evaluator.evalueazaImplementarea(proiect).ToString("0.00");
+            rezultatInterfata.Text = Evaluator.evalueazaInterfata(proiect).ToString("0.00");
+            rezultatContinut.Text = Evaluator.evalueazaContinutul(proiect).ToString("0.00");
+            rezultatPrezentare.Text = Evaluator.evalueazaPrezentarea(proiect).ToString("0.00");
+            rezultatTotal.Text = Evaluator.evalueaza(proiect).ToString("0.00");
         }
 
         private void slider_Scroll(object sender, System.EventArgs e)

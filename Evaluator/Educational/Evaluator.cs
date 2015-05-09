@@ -23,24 +23,25 @@
             double rezultat = 0;
             double scalingFactor = 1.0;
 
-            rezultat += proiect.tehnologiiOptime;
+            rezultat += proiect.tehnologiiPotrivite;
+            rezultat += proiect.formatOptimDeStocareADatelor;
+            rezultat += proiect.librariiOpenSource;
+            scalingFactor += toPercentage(proiect.tehnologiiModerne);
             rezultat += proiect.folosireaParadigmelor;
-            rezultat += proiect.tehnologiiOpenSource;
+            rezultat += proiect.creareUnorNoiServicii;
             
             switch (proiect.portabilitate)
             {
-                case Portabilitate.Cinci:
-                    rezultat += 5;
+                case Portabilitate.Minus30:
+                    scalingFactor -= 0.3;
                     break;
-                case Portabilitate.Trei:
-                    rezultat += 3;
+                case Portabilitate.Minus20:
+                    scalingFactor -= 0.2;
                     break;
-                case Portabilitate.Unu:
-                    rezultat += 1;
+                case Portabilitate.Minus10:
+                    scalingFactor -= 0.1;
                     break;
             }
-
-            scalingFactor += toPercentage(proiect.faraTehnologiiModerne);
 
             return rezultat * scalingFactor;
         }
@@ -50,26 +51,16 @@
             double rezultat = 0;
             double scalingFactor = 1.0;
 
-            rezultat += proiect.poateFiExtinsUsor;
-            rezultat += proiect.codEficient;
+            rezultat += proiect.usorDeExtins;
+            rezultat += proiect.algoritmiiUtilizati;
             rezultat += proiect.variabileCuNumeSemnificative;
             rezultat += proiect.codConsecvent;
             rezultat += proiect.codDocumentat;
-
-            switch (proiect.maturitateaProiectului)
-            {
-                case Maturitate.Zece:
-                    rezultat += 10;
-                    break;
-                case Maturitate.Sapte:
-                    rezultat += 7;
-                    break;
-                case Maturitate.Patru:
-                    rezultat += 4;
-                    break;
-            }
-
-            rezultat += proiect.testataRiguros;
+            rezultat += proiect.codEficient;
+            rezultat += proiect.automatizareaTestarii;
+            scalingFactor += toPercentage(proiect.absentaErorilorBanale);
+            rezultat += proiect.folosireaUnuiSistemDeVersionare;
+            scalingFactor += toPercentage(proiect.maturitate);
             
             switch (proiect.securitate)
             {
@@ -81,8 +72,7 @@
                     break;
             }
 
-            scalingFactor += toPercentage(proiect.sistemDeVersionareNeutilizat);
-            scalingFactor += toPercentage(proiect.distribuireNeechilibrata);
+            scalingFactor += toPercentage(proiect.distribuireEchilibrata);
 
             return rezultat * scalingFactor;
         }
@@ -104,7 +94,7 @@
             double scalingFactor = 1.0;
 
             rezultat += proiect.multipleFunctionalitati;
-            scalingFactor += toPercentage(proiect.functionalitatiInutile);
+            scalingFactor += toPercentage(proiect.utilitateaFunctionalitatilor);
             rezultat += proiect.evaluare;
             rezultat += proiect.feedback;
             rezultat += proiect.continutActualizabil;
@@ -142,10 +132,10 @@
             double scalingFactor = 1.0;
 
             rezultat += proiect.impresieGenerala;
-            scalingFactor += toPercentage(proiect.faraInformatiiGenerice);
-            scalingFactor += toPercentage(proiect.faraTutoriale);
-            scalingFactor += toPercentage(proiect.faraDescriereaArhitecturii);
-            scalingFactor += toPercentage(proiect.faraJustificareaTehnologiilor);
+            scalingFactor += toPercentage(proiect.oferaInformatiiGenerice);
+            scalingFactor += toPercentage(proiect.prezintaTutoriale);
+            scalingFactor += toPercentage(proiect.descrieArhitectura);
+            scalingFactor += toPercentage(proiect.justificaTehnologiile);
 
             return rezultat * scalingFactor;
         }
